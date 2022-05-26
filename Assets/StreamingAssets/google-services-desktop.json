@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1072538873440",
+    "firebase_url": "https://unity-project-376ca-default-rtdb.firebaseio.com",
+    "project_id": "unity-project-376ca",
+    "storage_bucket": "unity-project-376ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072538873440:android:7c2c5ee4d90dc80c339d05",
+        "android_client_info": {
+          "package_name": "com.Company.Android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072538873440-7m14fqoa74c0svq4ecna82ba6uh61b3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMTJqitKkaE9zhCZVjs5q1Ngrfj_TWQmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072538873440-7m14fqoa74c0svq4ecna82ba6uh61b3i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072538873440-1ltrcal8uggjiglcsojtcafk5s09oi5n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Company.Apple"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

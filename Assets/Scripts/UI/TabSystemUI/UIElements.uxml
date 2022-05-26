@@ -1,0 +1,130 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="Style/style.uss" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; width: auto; height: auto; left: auto; bottom: auto; top: auto; background-color: rgba(255, 255, 255, 0.3); display: flex; align-items: flex-start;">
+        <ui:VisualElement name="Head" style="background-color: rgb(206, 214, 224); width: 100%; height: 20%; flex-direction: row; align-items: center; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+            <ui:VisualElement name="Left-Side" style="width: 70%; height: 95%; flex-direction: row; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; left: 2px;">
+                <ui:Button text="Messages" display-tooltip-when-elided="true" name="Action1" class="Head-Buttons Head-Button" style="width: 23%; min-width: 5%; max-width: 23%; max-height: none; white-space: normal;" />
+                <ui:Button text="Examens" display-tooltip-when-elided="true" name="Action2" class="Head-Buttons Head-Button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 23%; white-space: normal; max-width: 23%; min-width: 5%;" />
+                <ui:Button text="Profile" display-tooltip-when-elided="true" name="Action3" class="Head-Buttons Head-Button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 23%; white-space: normal; max-width: 23%; min-width: 5%;" />
+                <ui:Button text="Notifications" display-tooltip-when-elided="true" name="Action4" class="Head-Buttons Head-Button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 100%; white-space: normal; max-width: 28%; min-width: 5%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Right-Side" style="width: 30%; height: 90%; flex-direction: row-reverse; right: 2px;">
+                <ui:Button display-tooltip-when-elided="true" name="Action5" usage-hints="None" class="Head-Buttons Head-Button" style="margin-left: -2px; margin-right: -2px; margin-top: -2px; margin-bottom: -2px; background-image: url(&apos;/Assets/Sprites/CameraView/close.png&apos;); background-color: rgba(87, 96, 111, 0); width: 30px; height: 30px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; right: 2px; bottom: auto; left: auto;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="width: 100%; height: 79%; top: 1%; background-color: rgb(223, 228, 234);">
+            <ui:VisualElement name="Activity1" style="flex-grow: 1; flex-direction: row; display: none;">
+                <ui:VisualElement name="Left-Side" style="width: 25%; background-color: rgb(206, 214, 224);">
+                    <ui:Button text="General" display-tooltip-when-elided="true" name="Rooms1" class="Rooms-Button" />
+                    <ui:Button text="Salle d&apos;attente" display-tooltip-when-elided="true" name="Rooms2" class="Rooms-Button" />
+                    <ui:Button text="Chambre n°1" display-tooltip-when-elided="true" name="Rooms3" class="Rooms-Button" />
+                    <ui:Button text="Chambre n°2" display-tooltip-when-elided="true" name="Rooms4" class="Rooms-Button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="General" style="width: 74.5%; height: auto; left: 0.5%; flex-grow: 0; display: flex;">
+                    <ui:VisualElement name="Top-Content" style="background-color: rgb(47, 53, 66); width: 100%; height: 85%;">
+                        <ui:ListView focusable="true" name="MessagesList" style="width: 100%; height: 100%; color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Bottom-Content" style="width: 100%; height: 14.5%; top: 0.5%; background-color: rgb(255, 99, 72); -unity-text-align: upper-left; justify-content: center; flex-direction: row;">
+                        <ui:TextField picking-mode="Ignore" value="text" text="Votre Message" name="MessageInput" class="Input-Message unity-text-input" style="color: rgb(0, 0, 0); -unity-text-align: middle-left; -unity-background-image-tint-color: rgb(0, 0, 0); width: 85.5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 0;" />
+                        <ui:Button text="Envoyer" display-tooltip-when-elided="true" name="MessageButton" class="Button-Message" style="color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 15%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-color: rgb(0, 0, 0); font-size: 18px; overflow: visible; height: 99%; -unity-text-outline-color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Salle" style="width: 74.5%; height: auto; left: 0.5%; flex-grow: 0; display: none;">
+                    <ui:VisualElement name="Top-Content" style="background-color: rgb(47, 53, 66); width: 100%; height: 85%;">
+                        <ui:ListView focusable="true" name="MessagesList2" style="width: 100%; height: 100%; color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Bottom-Content" style="width: 100%; height: 14.5%; top: 0.5%; background-color: rgb(255, 99, 72); -unity-text-align: upper-left; justify-content: center; flex-direction: row;">
+                        <ui:TextField picking-mode="Ignore" value="text" text="Votre Message" name="MessageInput2" class="Input-Message unity-text-input" style="color: rgb(0, 0, 0); -unity-text-align: middle-left; -unity-background-image-tint-color: rgb(0, 0, 0); width: 85.5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 0;" />
+                        <ui:Button text="Envoyer" display-tooltip-when-elided="true" name="MessageButton2" class="Button-Message" style="color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 15%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-color: rgb(0, 0, 0); font-size: 18px; overflow: visible; height: 99%; -unity-text-outline-color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Chambre1" style="width: 74.5%; height: auto; left: 0.5%; flex-grow: 0; display: none;">
+                    <ui:VisualElement name="Top-Content" style="background-color: rgb(47, 53, 66); width: 100%; height: 85%;">
+                        <ui:ListView focusable="true" name="MessagesList3" style="width: 100%; height: 100%; color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Bottom-Content" style="width: 100%; height: 14.5%; top: 0.5%; background-color: rgb(255, 99, 72); -unity-text-align: upper-left; justify-content: center; flex-direction: row;">
+                        <ui:TextField picking-mode="Ignore" value="text" text="Votre Message" name="MessageInput3" class="Input-Message unity-text-input" style="color: rgb(0, 0, 0); -unity-text-align: middle-left; -unity-background-image-tint-color: rgb(0, 0, 0); width: 85.5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 0;" />
+                        <ui:Button text="Envoyer" display-tooltip-when-elided="true" name="MessageButton3" class="Button-Message" style="color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 15%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-color: rgb(0, 0, 0); font-size: 18px; overflow: visible; height: 99%; -unity-text-outline-color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Chambre2" style="width: 74.5%; height: auto; left: 0.5%; flex-grow: 0; display: none;">
+                    <ui:VisualElement name="Top-Content" style="background-color: rgb(47, 53, 66); width: 100%; height: 85%;">
+                        <ui:ListView focusable="true" name="MessagesList4" style="width: 100%; height: 100%; color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Bottom-Content" style="width: 100%; height: 14.5%; top: 0.5%; background-color: rgb(255, 99, 72); -unity-text-align: upper-left; justify-content: center; flex-direction: row;">
+                        <ui:TextField picking-mode="Ignore" value="text" text="Votre Message" name="MessageInput4" class="Input-Message unity-text-input" style="color: rgb(0, 0, 0); -unity-text-align: middle-left; -unity-background-image-tint-color: rgb(0, 0, 0); width: 85.5%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; left: 0;" />
+                        <ui:Button text="Envoyer" display-tooltip-when-elided="true" name="MessageButton4" class="Button-Message" style="color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 15%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-color: rgb(0, 0, 0); font-size: 18px; overflow: visible; height: 99%; -unity-text-outline-color: rgb(0, 0, 0);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Activity2" style="flex-grow: 1; flex-direction: row; display: none;">
+                <ui:VisualElement name="Left-Side" style="width: 25%; background-color: rgb(206, 214, 224);">
+                    <ui:Button text="Examens" display-tooltip-when-elided="true" name="Exams" class="Rooms-Button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 20%; font-size: 28px; -unity-text-align: middle-center;" />
+                    <ui:Button text="Historique" display-tooltip-when-elided="true" name="History" class="Rooms-Button" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 20%; font-size: 28px; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Right-Side" style="width: 74.5%; height: auto; left: 0.5%; flex-grow: 0;">
+                    <ui:VisualElement name="ExamsSection" style="background-color: rgb(47, 53, 66); width: 100%; height: 100%; display: none;">
+                        <ui:Label text="La préparation à l&apos;examen est un exercice qui se planifie à l&apos;avance et ce, dès le premier cours. Donc, la gestion du temps, la présence active en classe, la prise de notes, la lecture et la révision des cours sont des comportements qui t&apos;aideront à te préparer aux examens." display-tooltip-when-elided="true" name="Description" style="width: 97%; height: 50%; color: rgb(255, 255, 255); white-space: normal; font-size: 22px; left: 10px; -unity-text-align: upper-center;" />
+                        <ui:VisualElement name="Actions" style="height: 50%; flex-direction: row; flex-wrap: wrap;">
+                            <ui:Label text="Demander un Examen" display-tooltip-when-elided="true" style="width: 98%; height: 20%; left: 10px; color: rgb(30, 144, 255); font-size: 26px; -unity-text-align: upper-center; -unity-font-style: bold;" />
+                            <ui:VisualElement style="width: 98%; left: 10px; flex-direction: row; flex-wrap: wrap; height: 76%;">
+                                <ui:Button text="Amniocentèse" display-tooltip-when-elided="true" name="Examen1" style="width: 48%; height: 40%; margin-top: 10px; background-color: rgb(30, 144, 255); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; white-space: normal; font-size: 16px; -unity-font-style: bold; display: flex;" />
+                                <ui:Button text="Coloscopie" display-tooltip-when-elided="true" name="Examen2" style="width: 48%; height: 40%; margin-top: 10px; background-color: rgb(30, 144, 255); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; font-size: 16px; white-space: normal; -unity-font-style: bold;" />
+                                <ui:Button text="Electrocardiogramme" display-tooltip-when-elided="true" name="Examen3" style="width: 48%; height: 40%; margin-top: 10px; background-color: rgb(30, 144, 255); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; flex-wrap: nowrap; white-space: normal; font-size: 16px; -unity-font-style: bold;" />
+                                <ui:Button text="Audiométrie" display-tooltip-when-elided="true" name="Examen4" style="width: 48%; height: 40%; top: auto; margin-top: 10px; background-color: rgb(30, 144, 255); border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; font-size: 16px; -unity-font-style: bold; white-space: normal;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="HistorySection" style="background-color: rgb(47, 53, 66); width: 100%; height: 100%; display: flex;">
+                        <ui:VisualElement name="Notification" style="width: 99%; height: 20%; top: 10px; background-color: rgb(206, 214, 224); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; justify-content: center; flex-direction: row; align-items: center; left: 5px;">
+                            <ui:Label text="Votre avez réussi l&apos;examen Amniocentèse                          avec Score: 7/10" display-tooltip-when-elided="true" name="Content" style="width: 80%; left: 10px; font-size: 18%; flex-wrap: wrap; height: 45px; white-space: normal; -unity-text-align: upper-center;" />
+                            <ui:VisualElement name="Actions" style="width: 20%; height: 80%; flex-direction: column;">
+                                <ui:Label text="23-04-2022" display-tooltip-when-elided="true" name="Date" style="-unity-text-align: upper-center;" />
+                                <ui:Label text="16:32" display-tooltip-when-elided="true" name="Time" style="-unity-text-align: upper-center;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Notification" style="width: 99%; height: 20%; top: 15px; background-color: rgb(206, 214, 224); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; justify-content: center; flex-direction: row; align-items: center; left: 5px;">
+                            <ui:Label text="Vous avez débuté l&apos;examen Amniocentèse" display-tooltip-when-elided="true" name="Content" style="width: 80%; left: 10px; font-size: 18%; flex-wrap: wrap;" />
+                            <ui:VisualElement name="Actions" style="width: 20%; height: 80%; flex-direction: column;">
+                                <ui:Label text="23-04-2022" display-tooltip-when-elided="true" name="Date" style="-unity-text-align: upper-center;" />
+                                <ui:Label text="15:00" display-tooltip-when-elided="true" name="Time" style="-unity-text-align: upper-center;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Activity3" style="flex-grow: 1; flex-direction: row; display: none;">
+                <ui:VisualElement name="Left-Side" style="width: 100%; background-color: rgb(47, 53, 66); align-items: center; font-size: 28px;">
+                    <ui:Label text="Modifier Votre Données" display-tooltip-when-elided="true" name="Title" style="color: rgb(255, 255, 255); -unity-font: url(&apos;/Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Electronic Highway Sign.TTF&apos;);" />
+                    <ui:TextField picking-mode="Ignore" label="Votre Nom      :" name="Nom" class="unity-text-input unity-base-field__input" style="width: 80%; margin-top: 0; left: -20px; align-items: center; justify-content: flex-start; color: rgb(255, 255, 255);" />
+                    <ui:TextField picking-mode="Ignore" label="Votre Email     :" value="filler text" name="Email" class="unity-base-field__input" style="width: 80%; margin-top: 0; left: -20px; align-items: center; color: rgb(255, 255, 255);" />
+                    <ui:TextField picking-mode="Ignore" label="Mot de passe :" name="Pass" is-delayed="false" password="true" class="unity-base-field__input" style="width: 80%; margin-top: 0; left: -20px; align-items: center; color: rgb(255, 255, 255);" />
+                    <ui:Button text="Modifier" display-tooltip-when-elided="true" name="ModButton" style="margin-top: 8px; width: 50%; height: 15%; font-size: 36px; margin-bottom: 10px; padding-top: 12px; padding-bottom: 12px; border-left-color: rgb(112, 161, 255); border-right-color: rgb(112, 161, 255); border-top-color: rgb(112, 161, 255); border-bottom-color: rgb(112, 161, 255); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; background-color: rgb(30, 144, 255); border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Activity4" style="flex-grow: 1; flex-direction: row; display: flex; flex-wrap: nowrap;">
+                <ui:VisualElement name="Left-Side" style="width: 100%; background-color: rgb(47, 53, 66); align-items: center; font-size: 28px; margin-bottom: 0; padding-bottom: 0; justify-content: flex-start;">
+                    <ui:VisualElement name="Notification" style="width: 99%; height: 20%; top: 20px; background-color: rgb(206, 214, 224); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; justify-content: center; flex-direction: row; align-items: center; flex-wrap: nowrap;">
+                        <ui:Label text="User1 à vous envoyer un message" display-tooltip-when-elided="true" name="Content" style="width: 80%; left: 10px; -unity-text-align: middle-left; white-space: normal; font-size: 24%; max-width: none; min-width: auto;" />
+                        <ui:VisualElement name="Actions" style="width: 20%; height: 80%; flex-direction: row-reverse;">
+                            <ui:Button display-tooltip-when-elided="true" name="Accept" style="background-image: url(&apos;/Assets/Sprites/Selection/Respond.png&apos;); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); background-color: rgba(188, 188, 188, 0); width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Notification" style="width: 99%; height: 20%; top: 30px; background-color: rgb(206, 214, 224); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; justify-content: center; flex-direction: row; align-items: center; flex-wrap: nowrap;">
+                        <ui:Label text="L&apos;administrateur a approuvé votre demande d&apos;examen" display-tooltip-when-elided="true" name="Content" style="width: 80%; left: 10px; font-size: 22%; white-space: normal; -unity-text-align: middle-left;" />
+                        <ui:VisualElement name="Actions" style="width: 20%; height: 80%; flex-direction: row-reverse;">
+                            <ui:Button display-tooltip-when-elided="true" name="Accept" style="background-image: url(&apos;/Assets/Sprites/Selection/Validation.png&apos;); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); background-color: rgba(188, 188, 188, 0); width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Notification" style="width: 99%; height: 20%; top: 40px; background-color: rgb(206, 214, 224); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; justify-content: center; flex-direction: row; align-items: center; flex-wrap: nowrap;">
+                        <ui:Label text="User1 à vous envoyer une invitation" display-tooltip-when-elided="true" name="Content" style="width: 80%; left: 10px; -unity-text-align: middle-left; white-space: normal; font-size: 24px;" />
+                        <ui:VisualElement name="Actions" style="width: 20%; height: 80%; flex-direction: row-reverse;">
+                            <ui:Button display-tooltip-when-elided="true" name="Accept" style="background-image: url(&apos;/Assets/Sprites/Selection/Circle-Check.png&apos;); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); background-color: rgba(188, 188, 188, 0); width: 50px;" />
+                            <ui:Button display-tooltip-when-elided="true" name="Decline" style="background-image: url(&apos;/Assets/Sprites/Selection/Circle-Close.png&apos;); background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); width: 50px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
