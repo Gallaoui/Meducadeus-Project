@@ -18,7 +18,7 @@ public class UISystem : MonoBehaviour
 
     [SerializeField] private GameObject MenuIcon;
 
-    private ChatSystemManager db;
+   // private ChatSystemManager db;
 
 
     #region ListView of messages
@@ -77,7 +77,7 @@ public class UISystem : MonoBehaviour
 
     private void Start()
     {
-        db = GetComponent<ChatSystemManager>();
+       /* db = GetComponent<ChatSystemManager>();
 
         LoadMessagesOnStart(db, general, "general", _general);
         LoadMessagesOnStart(db, salle, "salle", _salle);
@@ -88,11 +88,11 @@ public class UISystem : MonoBehaviour
         _button.clicked += () => MessageButtonPressed("general", _input);
         _button2.clicked += () => MessageButtonPressed("salle", _input2);
         _button3.clicked += () => MessageButtonPressed("chambre1", _input3);
-        _button4.clicked += () => MessageButtonPressed("chambre2", _input4);
+        _button4.clicked += () => MessageButtonPressed("chambre2", _input4);*/
         _closeButton.clicked += CloseButtonPressed;
         
     }
-
+    /*
     void LoadMessagesOnStart(ChatSystemManager db, List<string> items, string channelName, ListView _list)
     {
         // instantiate messages list for each channel
@@ -124,14 +124,14 @@ public class UISystem : MonoBehaviour
         _list.bindItem = bindItem;
         _list.itemsSource = items;
         _list.selectionType = SelectionType.Multiple;
-    }
-
+    }*/
+    /*
     void MessageButtonPressed(string channelName, TextField _input)
     {
         db.SendMessage(new Message(FirebaseConnection.instance.getUsername(), _input.value), () => print("message sent"), channelName);
         _input.value = "";
     }
-
+    */
     private void Update()
     {
         _general.Refresh();
